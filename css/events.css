@@ -1,25 +1,30 @@
+body{
+  margin: 0%;
+}
+
 .desktop {
     background-color: #f3f3f3;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    height: 100%;
   }
   
   .desktop .div {
     background-color: #f3f3f3;
     overflow: hidden;
-    width: 1440px;
-    height: 1024px;
-    position: relative;
+    width: 100%;
+    height: 100%;
+    position: absolute;
   }
   
   .desktop .overlap {
     position: absolute;
     width: 134px;
     height: 35px;
-    top: 103px;
-    left: 1270px;
+    top: 100px;
+    left: 85%;
     background-color: #0651b6;
     border-radius: 4px;
   }
@@ -27,7 +32,7 @@
   .desktop .text-wrapper {
     position: absolute;
     top: 3px;
-    left: 12px;
+    left: 12%;
     font-family: "Montserrat-Medium", Helvetica;
     font-weight: 500;
     color: #ffffff;
@@ -253,8 +258,8 @@
   }
   
   .desktop .group-wrapper {
-    position: absolute;
-    width: 1209px;
+    position: relative;
+    width: 100%;
     height: 64px;
     top: 0;
     left: 231px;
@@ -264,9 +269,9 @@
   .desktop .group-7 {
     position: relative;
     width: 72px;
-    height: 13px;
-    top: 25px;
-    left: 1117px;
+    height: 15px;
+    top: 20px;
+    left: 75%;
   }
   
   .desktop .text-wrapper-7 {
@@ -276,7 +281,7 @@
     font-family: "Montserrat-Medium", Helvetica;
     font-weight: 500;
     color: #000000;
-    font-size: 11px;
+    font-size: 20px;
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
@@ -284,8 +289,8 @@
   
   .desktop .text-wrapper-8 {
     position: absolute;
-    top: 97px;
-    left: 251px;
+    top: 95px;
+    left: 260px;
     font-family: "Montserrat-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -295,10 +300,10 @@
   }
   
   .desktop .overlap-4 {
-    position: absolute;
-    width: 1166px;
-    height: 813px;
-    top: 168px;
+    position: relative;
+    width: 82%;
+    height: 72%;
+    top: 100px;
     left: 251px;
     background-color: #ffffff;
     border-radius: 21px;
@@ -376,8 +381,8 @@
   
   .desktop .text-wrapper-14 {
     position: absolute;
-    top: 107px;
-    left: 1106px;
+    top: 105px;
+    left: 75%;
     font-family: "Montserrat-Medium", Helvetica;
     font-weight: 500;
     color: #0651b6;
