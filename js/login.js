@@ -12,6 +12,7 @@
         } else {
             alert('Login successful');
             // loginForm.submit();
+            //
         }
     });
     
