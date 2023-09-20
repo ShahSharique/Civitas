@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="row">
+        <img src="http://hdqwalls.com/download/1/glass-buildings-architecture-0n.jpg" alt="Background Image" class="background-image">
+        <div class="col-md-6 mx-auto p-0">
+            <div class="card">
+                <div class="login-box">
+                    <div class="login-snip">
+                        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
+                        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+                        <div class="login-space">
+                            <form id="login-form" class="login" action="login.php" method="post">
+                                <div class="group">
+                                    <label for="userLogin" class="label">Username</label>
+                                    <input id="userLogin" type="text" class="input" name="username" placeholder="Enter your username" required>
+                                </div>
+                                <div class="group">
+                                    <label for="passLogin" class="label">Password</label>
+                                    <input id="passLogin" type="password" class="input" name="password" data-type="password" placeholder="Enter your password" required>
+                                </div>
+                                <div class="group">
+                                    <input id="check" type="checkbox" class="check" checked>
+                                    <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                                </div>
+                                <div class="group">
+                                    <button type="submit" class="button">Sign In</button>
+                                </div>
+                                <div class="hr"></div>
+                                <div class="foot">
+                                    <a href="#">Forgot Password?</a>
+                                </div>
+                            </form>
+                            <form id="signup-form" class="sign-up-form" action="signup.php" method="post">
+                                <div class="group">
+                                    <label for="userSignUp" class="label">Username</label>
+                                    <input id="userSignUp" type="text" class="input" name="newUsername" placeholder="Create your Username" required>
+                                </div>
+                                <div class="group">
+                                    <label for="passSignUp" class="label">Password</label>
+                                    <input id="passSignUp" type="password" class="input" name="newPassword" data-type="password" placeholder="Create your password" required>
+                                </div>
+                                <div class="group">
+                                    <label for="passRepeat" class="label">Repeat Password</label>
+                                    <input id="passRepeat" type="password" class="input" name="repeatPassword" data-type="password" placeholder="Repeat your password" required>
+                                </div>
+                                <div class="group">
+                                    <label for="emailSignUp" class="label">Email Address</label>
+                                    <input id="emailSignUp" type="text" class="input" name="email" placeholder="Enter your email address" required>
+                                </div>
+                                <div class="group">
+                                    <button type="submit" class="button" id="button">Sign Up</button>
+                                </div>
+                                <div class="hr"></div>
+                                <div class="foot">
+                                    <label for="tab-1">Already Member?</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    
+    // JavaScript code for form validation
+    document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Simulate a successful login without checking values
+        alert('Login successful');
+        window.location.href = 'index.html'; // Redirect to index.html
+    });
+
+    const signupForm = document.getElementById('signup-form');
+    signupForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const newUsername = document.getElementById('userSignUp').value;
+        const newPassword = document.getElementById('passSignUp').value;
+        const repeatedPassword = document.getElementById('passRepeat').value;
+        const email = document.getElementById('emailSignUp').value;
+
+        if (newUsername.trim() === '' || email.trim() === '') {
+            alert('All fields in the sign-up form are required');
+        } else if (newPassword.trim() === '') {
+            alert('Password is required');
+        } else if (newPassword.length < 8) {
+            alert('Password must be at least 8 characters long');
+        } else if (newPassword !== repeatedPassword) {
+            alert('Passwords do not match');
+        } else {
+            // Simulate a successful signup without checking values
+            alert('Sign-up successful');
+            window.location.href = 'index.html'; // Redirect to index.html
+        }
+    });
+});
+
+
+</script>
+
+
+</body>
+</html>
